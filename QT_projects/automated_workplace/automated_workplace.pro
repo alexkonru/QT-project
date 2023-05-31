@@ -14,6 +14,7 @@ SOURCES += \
     fourthwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    sale.cpp \
     secondwindow.cpp \
     thirdwindow.cpp
 
@@ -22,6 +23,7 @@ HEADERS += \
     firstwindow.h \
     fourthwindow.h \
     mainwindow.h \
+    sale.h \
     secondwindow.h \
     thirdwindow.h
 
@@ -30,6 +32,7 @@ FORMS += \
     firstwindow.ui \
     fourthwindow.ui \
     mainwindow.ui \
+    sale.ui \
     secondwindow.ui \
     thirdwindow.ui
 

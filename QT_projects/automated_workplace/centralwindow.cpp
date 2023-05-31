@@ -69,3 +69,14 @@ void CentralWindow::on_pushButton_2_clicked()
     }
 }
 
+
+void CentralWindow::on_pushButton_3_clicked()
+{
+    close();
+    if (!f6){
+    window6 = new sale(this);
+    window6->show();
+    f6=true;
+    }
+}
+

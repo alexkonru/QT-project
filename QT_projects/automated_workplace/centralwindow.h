@@ -6,6 +6,7 @@
 #include "secondwindow.h"
 #include "thirdwindow.h"
 #include "fourthwindow.h"
+#include "sale.h"
 
 namespace Ui {
 class CentralWindow;
@@ -30,13 +31,16 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::CentralWindow *ui;
     FirstWindow *window1;
     SecondWindow *window2;
     ThirdWindow *window3;
     FourthWindow *window5;
-    bool f1=false, f2=false, f3=false, f4=false, f5=false;
+    sale *window6;
+    bool f1=false, f2=false, f3=false, f4=false, f5=false, f6=false;
 };
 
 #endif // CENTRALWINDOW_H

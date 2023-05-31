@@ -30,7 +30,7 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-private:
+public:
     Ui::ThirdWindow *ui;
     QSqlDatabase db;
     QSqlQuery *query;
