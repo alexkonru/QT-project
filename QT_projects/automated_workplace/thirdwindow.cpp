@@ -59,7 +59,7 @@ void ThirdWindow::on_tableView_clicked(const QModelIndex &index)
 }
 
 
-void ThirdWindow::on_pushButton_4_clicked()
+void ThirdWindow::on_pushButton_4_clicked()//поиск в бд
 {
     if(ui->lineEdit->text()!=""){
         model->setQuery(QString("SELECT * FROM Customers WHERE Телефон='%1'").arg(ui->lineEdit->text()));

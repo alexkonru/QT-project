@@ -49,26 +49,26 @@ void FirstWindow::on_pushButton_clicked()
 }
 
 
-void FirstWindow::on_pushButton_2_clicked()
+void FirstWindow::on_pushButton_2_clicked()//добавление строки
 {
     model->insertRow(model->rowCount());
 }
 
 
-void FirstWindow::on_pushButton_3_clicked()
+void FirstWindow::on_pushButton_3_clicked()//удаление строки
 {
     model->removeRow(row);
 }
 
 
-void FirstWindow::on_tableView_clicked(const QModelIndex &index)
+void FirstWindow::on_tableView_clicked(const QModelIndex &index)//выбор строки
 {
     row = index.row();
     column = index.column();
 }
 
 
-void FirstWindow::on_pushButton_4_clicked()
+void FirstWindow::on_pushButton_4_clicked()//переход по гиперссылке
 {
     QModelIndex ind = model->index(row, column, QModelIndex());
     link = model->data(ind, Qt::DisplayRole);

@@ -59,7 +59,7 @@ void SecondWindow::on_tableView_clicked(const QModelIndex &index)
 }
 
 
-void SecondWindow::on_pushButton_4_clicked()
+void SecondWindow::on_pushButton_4_clicked()//поиск в бд
 {
     if(ui->lineEdit->text()!=""){
         model->setQuery(QString("SELECT * FROM Accessories WHERE Наименование='%1'").arg(ui->lineEdit->text()));
@@ -84,7 +84,7 @@ int SecondWindow::sizeb(){ // Размер базы данных
 }
 
 
-void SecondWindow::on_pushButton_5_clicked()
+void SecondWindow::on_pushButton_5_clicked()// объединение строк
 {
     int n=sizeb();
     for (int j=0; j<n-1; j++){
