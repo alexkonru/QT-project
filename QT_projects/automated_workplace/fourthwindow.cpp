@@ -73,8 +73,22 @@ FourthWindow::FourthWindow(QWidget *parent) :
         sum_all_out += (d1 * d2);
     }
     QString cur = QString::number(sum_all_out);
-    ui->label_4->text() = cur;
+    ui->label_4->setText(cur + " руб.");
     db2.close();
+
+    cur = QString::number((sum_end - sum_begin)*0.05);
+    ui->label_8->setText(cur + " руб.");
+
+    cur = QString::number(sum_end);
+    ui->label_5->setText(cur + " руб.");
+
+    double v = (sum_end - sum_begin)*0.95;
+    int v_ = (int)v;
+    cur = QString::number(v_);
+    ui->label_6->setText(cur + " руб.");
+
+    cur = QString::number(sum_end - sum_all_out);
+    ui->label_10->setText(cur + " руб.");
 }
 
 FourthWindow::~FourthWindow()

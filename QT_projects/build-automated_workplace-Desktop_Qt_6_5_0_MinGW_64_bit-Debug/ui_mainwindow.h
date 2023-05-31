@@ -204,7 +204,7 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt;\">\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217</span></p></body></html>", nullptr));
         groupBox->setTitle(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">\320\233\320\276\320\263\320\270\320\275</span></p></body></html>", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>\320\237\320\276 \321\203\320\274\320\276\320\273\321\207\320\260\320\275\320\270\321\216 \320\273\320\276\320\263\320\270\320\275 - , \320\277\320\260\321\200\320\276\320\273\321\214 - 000000</p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>\320\237\320\276 \321\203\320\274\320\276\320\273\321\207\320\260\320\275\320\270\321\216 \320\273\320\276\320\263\320\270\320\275 - admin, \320\277\320\260\321\200\320\276\320\273\321\214 - 000000</p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">\320\237\320\260\321\200\320\276\320\273\321\214</span></p></body></html>", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\320\222\321\205\320\276\320\264", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\321\205\320\276\320\264", nullptr));

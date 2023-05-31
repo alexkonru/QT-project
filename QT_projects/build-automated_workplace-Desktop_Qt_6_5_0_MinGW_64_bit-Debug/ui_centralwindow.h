@@ -21,6 +21,7 @@ class Ui_CentralWindow
 {
 public:
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_3;
     QPushButton *button1;
     QPushButton *button2;
     QPushButton *button3;
@@ -34,11 +35,18 @@ public:
         CentralWindow->resize(721, 611);
         verticalLayout = new QVBoxLayout(CentralWindow);
         verticalLayout->setObjectName("verticalLayout");
-        button1 = new QPushButton(CentralWindow);
-        button1->setObjectName("button1");
+        pushButton_3 = new QPushButton(CentralWindow);
+        pushButton_3->setObjectName("pushButton_3");
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy);
+
+        verticalLayout->addWidget(pushButton_3);
+
+        button1 = new QPushButton(CentralWindow);
+        button1->setObjectName("button1");
         sizePolicy.setHeightForWidth(button1->sizePolicy().hasHeightForWidth());
         button1->setSizePolicy(sizePolicy);
         button1->setIconSize(QSize(20, 100));
@@ -82,6 +90,7 @@ public:
     void retranslateUi(QDialog *CentralWindow)
     {
         CentralWindow->setWindowTitle(QCoreApplication::translate("CentralWindow", "menu", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("CentralWindow", "\320\237\321\200\320\276\320\264\320\260\320\266\320\260", nullptr));
         button1->setText(QCoreApplication::translate("CentralWindow", "\320\222\320\265\320\273\320\276\321\201\320\270\320\277\320\265\320\264\321\213", nullptr));
         button2->setText(QCoreApplication::translate("CentralWindow", "\320\220\320\272\321\201\320\265\321\201\321\201\321\203\320\260\321\200\321\213", nullptr));
         button3->setText(QCoreApplication::translate("CentralWindow", "\320\232\320\273\320\270\320\265\320\275\321\202\321\213", nullptr));

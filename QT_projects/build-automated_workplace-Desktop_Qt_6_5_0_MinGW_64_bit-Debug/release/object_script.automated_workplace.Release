@@ -3,6 +3,7 @@ release/firstwindow.o
 release/fourthwindow.o
 release/main.o
 release/mainwindow.o
+release/sale.o
 release/secondwindow.o
 release/thirdwindow.o
 release/qrc_resource.o
@@ -10,5 +11,6 @@ release/moc_centralwindow.o
 release/moc_firstwindow.o
 release/moc_fourthwindow.o
 release/moc_mainwindow.o
+release/moc_sale.o
 release/moc_secondwindow.o
 release/moc_thirdwindow.o

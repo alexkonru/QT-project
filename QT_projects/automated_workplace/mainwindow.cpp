@@ -25,7 +25,7 @@ void MainWindow::on_pushButton_clicked()
 {
     QString login = ui->login->text();
     QString password = ui->password->text();
-    if (login == "" && password == "000000"){
+    if (login == "admin" && password == "000000"){
     close();
     window = new CentralWindow(this);
     window->show();
