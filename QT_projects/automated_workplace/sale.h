@@ -35,8 +35,8 @@ private:
     QSqlTableModel *model, *model1, *model2;
     int row;
     int sizeb(int);
-    int s = 0;
-    int itog;
+    double s = 0;
+    double itog;
     int kol;
     int sum_begin;
     int sum_end;

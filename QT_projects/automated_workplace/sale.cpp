@@ -63,10 +63,11 @@ void sale::on_pushButton_2_clicked()
 {
     if(ui->lineEdit->text()!=""){
         int n  = sizeb(0);
-        for (int i=0; i<n-1; i++){
+        for (int i=0; i<n; i++){
             QModelIndex ind = model->index(i, 1, QModelIndex());
             QVariant data = model->data(ind, Qt::DisplayRole);
             QString d = data.toString();
+            qDebug()<<d;
             if(d==ui->lineEdit->text()){
                 ind = model->index(i, 0, QModelIndex());
                 data = model->data(ind, Qt::DisplayRole);
@@ -161,16 +162,16 @@ void sale::on_pushButton_4_clicked()//товар, цена, итог
                 line_t = d2;
                 ind = model1->index(number - 1, 5, QModelIndex());
                 data = model1->data(ind, Qt::DisplayRole);
-                int d3_ = data.toInt();
+                double d3_ = data.toDouble();
                 sum_begin += d3_ * ui->lineEdit_3->text().toInt();
                 d3_ = d3_ * 1.1 * ui->lineEdit_3->text().toInt();
+                if (s>0) {itog = (d3_ * (100 - s/100)); qDebug()<<d3_<<s;}
+                else {itog = d3_;}
                 QString d3 = QString::number(d3_);
                 ui->label_4->setText(d1 + " " + d2);
                 ui->label_3->setText(d3 + "руб.");
-                if (s>0) {itog = d3_ * (s/100);}
-                else {itog = data.toInt();}
-                sum_end += itog;
                 QString i = QString::number(itog);
+                sum_end += itog;
                 ui->label_10->setText(i + " руб.");
                 db1.close();
             }
@@ -215,14 +216,14 @@ void sale::on_pushButton_4_clicked()//товар, цена, итог
                 QString d2 = data.toString();
                 ind = model2->index(number - 1, 3, QModelIndex());
                 data = model2->data(ind, Qt::DisplayRole);
-                int d3_ = data.toInt();
+                int d3_ = data.toDouble();
                 sum_begin += d3_ * ui->lineEdit_3->text().toInt();
                 d3_ = d3_ * 1.1 * ui->lineEdit_3->text().toInt();
                 QString d3 = QString::number(d3_);
                 ui->label_4->setText(d1 + " " + d2);
                 ui->label_3->setText(d3 + "руб.");
-                if (s>0) {itog = d3_ * (s/100);}
-                else {itog = data.toInt();}
+                if (s>0) {itog = d3_ * (100 - s/100);}
+                else {itog = d3_;}
                 QString i = QString::number(itog);
                 ui->label_10->setText(i + " руб.");
                 db2.close();
