@@ -36,7 +36,7 @@ private:
     int row;
     int sizeb(int);
     double s = 0;
-    double itog;
+    int itog;
     int kol;
     int sum_begin;
     int sum_end;

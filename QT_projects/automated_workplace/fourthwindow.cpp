@@ -76,13 +76,13 @@ FourthWindow::FourthWindow(QWidget *parent) :
     ui->label_4->setText(cur + " руб.");
     db2.close();
 
-    cur = QString::number(abs(sum_end - sum_begin)*0.05);
+    cur = QString::number((int)((sum_end - sum_begin)*0.05));
     ui->label_8->setText(cur + " руб.");
 
     cur = QString::number(sum_end);
     ui->label_5->setText(cur + " руб.");
 
-    double v = abs(sum_end - sum_begin)*0.95;
+    int v = (int)((sum_end - sum_begin)*0.95);
     cur = QString::number(v);
     ui->label_6->setText(cur + " руб.");
 
