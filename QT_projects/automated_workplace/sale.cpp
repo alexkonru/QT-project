@@ -165,7 +165,7 @@ void sale::on_pushButton_4_clicked()//товар, цена, итог
                 double d3_ = data.toDouble();
                 sum_begin += d3_ * ui->lineEdit_3->text().toInt();
                 d3_ = d3_ * 1.1 * ui->lineEdit_3->text().toInt();
-                if (s>0) {itog = (d3_ * (100 - s/100)); qDebug()<<d3_<<s;}
+                if (s>0) {itog = (d3_ * (1 - s/100)); qDebug()<<d3_<<s;}
                 else {itog = d3_;}
                 QString d3 = QString::number(d3_);
                 ui->label_4->setText(d1 + " " + d2);
@@ -222,7 +222,7 @@ void sale::on_pushButton_4_clicked()//товар, цена, итог
                 QString d3 = QString::number(d3_);
                 ui->label_4->setText(d1 + " " + d2);
                 ui->label_3->setText(d3 + "руб.");
-                if (s>0) {itog = d3_ * (100 - s/100);}
+                if (s>0) {itog = d3_ * (1 - s/100);}
                 else {itog = d3_;}
                 QString i = QString::number(itog);
                 ui->label_10->setText(i + " руб.");
