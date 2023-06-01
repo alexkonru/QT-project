@@ -35,6 +35,7 @@ SecondWindow::~SecondWindow()
 
 void SecondWindow::on_pushButton_clicked()
 {
+    db.close();
     close();
     CentralWindow *window = new CentralWindow(this);
     window->show();
@@ -94,8 +95,7 @@ void SecondWindow::on_pushButton_5_clicked()// объединение строк
     QModelIndex ind2 = model->index(j, 2, QModelIndex());
     QVariant data2 = model->data(ind2, Qt::DisplayRole);
     int kol1 = data2.toInt();
-    for (int i=0; i<n-1; i++){
-        if (i==j) break;
+    for (int i=j+1; i<n; i++){
         QModelIndex ind = model->index(i, 0, QModelIndex());
         QVariant data = model->data(ind, Qt::DisplayRole);
         QString d2 = data.toString();
@@ -104,7 +104,7 @@ void SecondWindow::on_pushButton_5_clicked()// объединение строк
             QVariant data = model->data(ind, Qt::DisplayRole);
             int kol2 = data.toInt();
             int kol=kol1+kol2;
-            model->removeRow(j);
+            model->removeRow(i);
             query->exec(QString("UPDATE Accessories SET Количество = %0 WHERE Наименование = '%1';").arg(kol).arg(d2));
         }
     }

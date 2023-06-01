@@ -35,6 +35,7 @@ ThirdWindow::~ThirdWindow()
 
 void ThirdWindow::on_pushButton_clicked()
 {
+    db.close();
     close();
     CentralWindow *window = new CentralWindow(this);
     window->show();

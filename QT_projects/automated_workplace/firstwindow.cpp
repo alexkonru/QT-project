@@ -43,6 +43,7 @@ FirstWindow::~FirstWindow()
 
 void FirstWindow::on_pushButton_clicked()
 {
+    db.close();
     close();
     CentralWindow *window = new CentralWindow(this);
     window->show();
@@ -102,26 +103,27 @@ void FirstWindow::on_pushButton_5_clicked() //поиск в бд
 
 void FirstWindow::on_pushButton_6_clicked() // Объединение одинаковых строк в бд
 {
+    bool f = false;
     int n=sizeb();
-    for (int j=0; j<n-1; j++){
+    for (int j=0; j<n-1 && f==false; j++){
     QModelIndex ind = model->index(j, 2, QModelIndex());
     QVariant data = model->data(ind, Qt::DisplayRole);
     QString d = data.toString();
     QModelIndex ind2 = model->index(j, 4, QModelIndex());
     QVariant data2 = model->data(ind2, Qt::DisplayRole);
     int kol1 = data2.toInt();
-    for (int i=0; i<n-1; i++){
-        if (i==j) break;
+    for (int i=j+1; i<n; i++){
         QModelIndex ind = model->index(i, 2, QModelIndex());
         QVariant data = model->data(ind, Qt::DisplayRole);
         QString d2 = data.toString();
-        if (d==d2){
+        if (d==d2 && i!=j){
             QModelIndex ind = model->index(i, 4, QModelIndex());
             QVariant data = model->data(ind, Qt::DisplayRole);
             int kol2 = data.toInt();
             int kol=kol1+kol2;
-            model->removeRow(j);
+            model->removeRow(i);
             query->exec(QString("UPDATE Bikes SET Количество = %0 WHERE Модель = '%1';").arg(kol).arg(d2));
+            f = true;
         }
     }
     }
