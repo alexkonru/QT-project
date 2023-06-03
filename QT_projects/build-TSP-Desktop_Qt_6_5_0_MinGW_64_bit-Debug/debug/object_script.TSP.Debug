@@ -1,0 +1,10 @@
+debug/city.o
+debug/main.o
+debug/mainwindow.o
+debug/mygraphicsscene.o
+debug/road.o
+debug/solution.o
+debug/qrc_recours.o
+debug/moc_mainwindow.o
+debug/moc_mygraphicsscene.o
+debug/moc_solution.o

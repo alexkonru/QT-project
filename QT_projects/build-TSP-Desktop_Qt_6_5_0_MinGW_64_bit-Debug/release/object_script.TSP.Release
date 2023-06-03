@@ -1,0 +1,10 @@
+release/city.o
+release/main.o
+release/mainwindow.o
+release/mygraphicsscene.o
+release/road.o
+release/solution.o
+release/qrc_recours.o
+release/moc_mainwindow.o
+release/moc_mygraphicsscene.o
+release/moc_solution.o
