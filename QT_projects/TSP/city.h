@@ -18,8 +18,6 @@ public:
     void set_number(QString);
     void selected_color();
     void unselected_color();
-    friend std::fstream &operator>>(std::fstream &fin, city &p);
-    friend std::fstream &operator<<(std::fstream &fout, const city &p);
 
 private:
     int pos_x;

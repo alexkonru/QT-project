@@ -124,7 +124,7 @@ void MainWindow::choose_city(city* c){
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *e) {
-    if (e->key() == Qt::Key_Delete || e->key() == Qt::Key_Backspace) {
+    if (e->key() == Qt::Key_Delete) {
         QGraphicsItem* item = scene->QGraphicsScene::focusItem();
         city* c = dynamic_cast<city*>(item);
         if (c) {

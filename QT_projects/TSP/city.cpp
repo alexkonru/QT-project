@@ -63,19 +63,3 @@ void city::unselected_color() {
 bool operator== (const city &c1, const city &c2) {
     return c1.name == c2.name;
 }
-
-std::fstream &operator<<(std::fstream &fout, const city &c) {
-    fout << '\n' << c.name.toStdString() <<
-            '\n' << c.pos().x() << '\n' << c.pos().y() << '\n';
-    return fout;
-}
-
-std::fstream &operator>>(std::fstream &fin, city &c) {
-    std::string name;
-    fin >> name;
-    c.name = QString::fromStdString(name);
-    int x, y;
-    fin >> x; fin >> y;
-    c.moveBy(x, y);
-    return fin;
-}
